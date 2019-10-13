@@ -19,7 +19,7 @@ void Queue<T>::Push(const T &x){
     if(rear == capacity - 1){
         capacity *= 2;
         T *temp = new T[capacity]; //새로운 배열
-        for(int i = 0; i < rear; i++)
+        for(int i = first; i < rear; i++)
         {
             temp[i] = queue[i];
         }

@@ -32,7 +32,7 @@ void Queue<T>::Push(const T &x){
 template <class T>
 T* Queue<T>::Pop(){
     if(front == rear) return 0; // queue is Empty.
-    T x  = queue[front++];
+    T x  = queue[++front];
     return &x;
 }
 

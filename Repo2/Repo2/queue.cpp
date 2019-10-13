@@ -26,7 +26,7 @@ void Queue<T>::Push(const T &x){
         delete [] queue; //그 전 메모리를 반환한다.
         queue = temp;
     } // 큐가 full이므로 크기를 두배로 늘려준다.
-    queue[rear++] = x;
+    queue[++rear] = x;
 }
 
 template <class T>

@@ -4,8 +4,11 @@ Queue and Stack DataStructure
 # Language : C++
 
 # Created in xcode, If you use another IDE, follow below recommand please.
-Download file in (path: repo2/repo2), and bring queue, stack, main.cpp.
+Download file in main.cpp.
 Additional Libraries are not required to be registered.
 
-# cpp
+## Stack and Queue
 basic Pop(), Push(), Print(), Top() in Cpp files using C++
+
+## linkedStackQueue
+Linked using Stack, Queue

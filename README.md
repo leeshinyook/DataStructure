@@ -12,3 +12,6 @@ basic Pop(), Push(), Print(), Top() in Cpp files using C++
 
 ## linkedStackQueue
 Linked using Stack, Queue
+
+## Polynomial
+https://leeshinyook.github.io/dev/c++/poly-post/ << Summary in my Blog!

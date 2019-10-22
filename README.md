@@ -1,6 +1,6 @@
-# QueueAndStack
+# DataStructure
 
-Queue and Stack DataStructure
+DataStructure code
 
 # Language : C++
 

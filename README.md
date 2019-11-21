@@ -1,10 +1,11 @@
 # DataStructure
 
-DataStructure code
+DataStructure code <br>
+C++를 이용한 자료구조
 
 # Language : C++
 
-# Created in xcode, If you use another IDE, follow below recommand please.
+# Only cpp file.
 
 Download file in main.cpp.
 Additional Libraries are not required to be registered.
@@ -28,3 +29,4 @@ basic Pop(), Push(), Print() in CircleQueue
 ## BST(이진탐색트리)
 
 delete, insert, preorder, inorder, postorder
+

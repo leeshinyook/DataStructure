@@ -27,4 +27,4 @@ basic Pop(), Push(), Print() in CircleQueue
 
 ## BST(이진탐색트리)
 
-insert, preorder 구현 (delete, inorder postorder 구현예정)
+delete, insert, preorder, inorder, postorder

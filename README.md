@@ -33,4 +33,10 @@ delete, insert, preorder, inorder, postorder
 ## Graph
 
 DFS, BFS(구현예정)<br>
-*Queue, Stack을 이용한 풀이추가예정*
+_Queue, Stack을 이용한 풀이추가예정_
+
+## Sorting(여러가지 정렬)
+
+1. SeqSearch | 순차탐색
+2. BinarySearch | 이진탐색
+3. 구현예정...

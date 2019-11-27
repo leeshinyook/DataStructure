@@ -35,8 +35,7 @@ delete, insert, preorder, inorder, postorder
 DFS, BFS(구현예정)<br>
 _Queue, Stack을 이용한 풀이추가예정_
 
-## Sorting(여러가지 정렬)
+## Searching
 
 1. SeqSearch | 순차탐색
 2. BinarySearch | 이진탐색
-3. 구현예정...

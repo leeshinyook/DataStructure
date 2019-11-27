@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
 
-class Sort
+class Search
 {
 public:
-    Sort(){};
+    Search(){};
     int SeqSearch(int *a, const int n, const int &k);    // 순차탐색
     int BinarySearch(int *a, const int &k, const int n); // 이진탐색
     char compare(int num1, int num2);
@@ -12,7 +12,7 @@ public:
 private:
 };
 
-int Sort::SeqSearch(int *a, const int n, const int &k)
+int Search::SeqSearch(int *a, const int n, const int &k)
 {
     // 요구사항
     // a[0:n-1]을 왼쪽에서 오른쪽으로 탐색한다.
@@ -26,7 +26,7 @@ int Sort::SeqSearch(int *a, const int n, const int &k)
     }
     return i;
 }
-int Sort::BinarySearch(int *a, const int &k, const int n)
+int Search::BinarySearch(int *a, const int &k, const int n)
 {
     // 정렬된 배열 a[0],..., a[n - 1]에서 x를 탐색한다.
     for (int left = 0, right = n - 1; left <= right;)
@@ -46,7 +46,7 @@ int Sort::BinarySearch(int *a, const int &k, const int n)
     }
     return -1; // not Found
 }
-char Sort::compare(int num1, int num2)
+char Search::compare(int num1, int num2)
 {
     if (num1 == num2)
     {
@@ -64,7 +64,7 @@ char Sort::compare(int num1, int num2)
 
 int main()
 {
-    Sort array;
+    Search array;
     int unsorted_array[10] = {2, 3, 1, 5, 7, 9, 4, 6, 10};
     int sorted_array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     cout << array.SeqSearch(unsorted_array, 10, 4) << endl;

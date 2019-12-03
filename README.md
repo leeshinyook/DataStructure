@@ -33,8 +33,7 @@ delete, insert, preorder, inorder, postorder
 ## Graph
 
 1. DijkstraAlgo (다익스트라 알고리즘구현)
-2. DFS, BFS(구현예정)<br>
-_Queue, Stack을 이용한 풀이추가예정_
+2. DFS, BFS
 
 
 ## Searching

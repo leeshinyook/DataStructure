@@ -1,4 +1,5 @@
 #include <iostream>
+#include <queue>
 using namespace std;
 
 class Graph; // 전방 선언
@@ -16,7 +17,7 @@ public:
     void InsertEdge(int v, int u);
     void PrintVertex();
     void DFS(const int v);
-//    void BFS(const int v);
+    void BFS(const int v);
     void Components();
 private:
     ChainNodePointer *HeadNodes;
@@ -64,6 +65,26 @@ void Graph::DFS(const int v) {
     }
 }
 
+void Graph::BFS(const int v) {
+    cout << v << " ";
+    visited[v] = true;
+    queue<int> q;
+    q.push(v);
+
+    while(!q.empty()) {
+        q.pop();
+        for(ChainNode *p = HeadNodes[v]; p; p -> link) {
+            int w = p -> data;
+            if(!visited[w]) {
+                q.push(w);
+                visited[w] = true;
+            }
+
+        }
+    }
+
+}
+
 void Graph::Components() { // 그래프의 연결요소들을 결정한다.
     for(int i = 0; i < n; i++) {
         if (!visited) {
@@ -71,6 +92,7 @@ void Graph::Components() { // 그래프의 연결요소들을 결정한다.
         }
     }
 }
+
 int main() {
     int n, e; // n - 정점의 수, e - 간선의 수
     int k, u, v;

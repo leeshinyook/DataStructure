@@ -21,13 +21,32 @@ public:
         }
         a[i + 1] = e;
     }
+    void QuickSort(int * a, int left, const int right) {
+        // 중추키(pivot)는 a[left]로 선정한다.
+        // a[left] <= a[rigth + 1]라고 가정한다.
+        if(left < right) {
+            int i = left;
+            int j = right + 1;
+            int pivot = a[left];
+            do {
+                do { i++;} while (a[i] < pivot);
+                do { j--;} while (a[j] > pivot);
+                if(i < j) swap(a[i], a[j]);
+            } while(i < j);
+            swap(a[left], a[j]);
+
+            QuickSort(a, left, j - 1);
+            QuickSort(a, j + 1, right);
+        }
+    }
 };
 
 int main() {
     int arr[10] = {0,5,1,2,3,6,13,23,4,2}; //a[0]는 사용하지 않았다.
     Sort sort;
-    sort.InsertionSort(arr, 9);
-    for(int i = 0; i < 10; i++) {
+//    sort.InsertionSort(arr, 9);
+    sort.QuickSort(arr, 1, 10);
+    for(int i = 1; i < 10; i++) {
         cout << arr[i] << " ";
     }
     return 0;

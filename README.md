@@ -45,3 +45,4 @@ delete, insert, preorder, inorder, postorder
 ## Sorting
 
 1. InsertionSort | 삽입정렬
+2. QuickSort | 퀵정렬

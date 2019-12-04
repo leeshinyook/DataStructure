@@ -40,3 +40,8 @@ delete, insert, preorder, inorder, postorder
 
 1. SeqSearch | 순차탐색
 2. BinarySearch | 이진탐색
+
+
+## Sorting
+
+1. InsertionSort | 삽입정렬

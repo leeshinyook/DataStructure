@@ -39,13 +39,55 @@ public:
             QuickSort(a, j + 1, right);
         }
     }
+    void Merge(int *a,int *sorted, int m, int middle, int n) {
+        int i = m;
+        int j = middle + 1;
+        int k = m;
+
+        while(i <= middle && j <=n) {
+            if(a[i] <= a[j]) {
+                sorted[k] = a[i];
+                i++;
+            } else {
+                sorted[k] = a[j];
+                j++;
+            }
+            k++;
+        }
+        if(i > middle) { // i가 전부 담긴경우 j삽입.
+            for(int t = j; t <= n; t++) {
+                sorted[k] = a[t];
+                k++;
+            }
+        } else { // 그 반대.
+            for(int t = i; t <= middle; t++) {
+                sorted[k] = a[t];
+                k++;
+            }
+        }
+        for(int t = m; t <= n; t++) {
+            a[t] = sorted[t];
+        }
+    }
+    void MergeSort(int *a, int m, int n) {
+        int tempList[10] = {};
+        if(m < n) {
+            int middle = (m + n) / 2;
+            MergeSort(a, m, middle);
+            MergeSort(a, middle + 1, n);
+            Merge(a, tempList, m, middle, n);
+        }
+    }
+
+
 };
 
 int main() {
     int arr[10] = {0,5,1,2,3,6,13,23,4,2}; //a[0]는 사용하지 않았다.
     Sort sort;
 //    sort.InsertionSort(arr, 9);
-    sort.QuickSort(arr, 1, 10);
+//    sort.QuickSort(arr, 1, 10);
+    sort.MergeSort(arr, 1, 9);
     for(int i = 1; i < 10; i++) {
         cout << arr[i] << " ";
     }
